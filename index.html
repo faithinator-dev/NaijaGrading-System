@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaijaGrading System - Nigerian Academic Grading Calculator</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Animated Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-green: #008751;
+            --dark-green: #006b3f;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .hero {
+            height: 400px;
+            background-image: url('images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 135, 81, 0.85);
+            padding: 25px 40px;
+            border-radius: 10px;
+        }
+
+        .custom-card {
+            transition: all 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 135, 81, 0.3) !important;
+        }
+
+        .card-image {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            color: var(--primary-green);
+        }
+
+        .btn-success {
+            background-color: var(--primary-green);
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(0, 135, 81, 0.25);
+        }
+
+        .result {
+            background-color: #f0f9f4;
+            border-left: 4px solid var(--primary-green);
+            min-height: 50px;
+        }
+
+        .result-text {
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .info-section {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .note-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .note-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .animated-icon {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .pulse-icon {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+                <i class="fas fa-graduation-cap animated-icon"></i> NaijaGrading System
+            
+
+        .rotate-icon {
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+images/secondary-school.jpg" 
+                         alt="Secondary School Students" 
+                         class="card-img-top card-image">
+                    <div class="card-body p-4">
+                        <h2 class="card-title h4 fw-bold mb-2">
+                            <i class="fas fa-school text-success pulse-icon"></i> Secondary School
+                        
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center justify-content-center">
+        <div class="hero-content text-center text-white">
+            <h1 class="display-4 fw-bold mb-3">🇳🇬 NaijaGrading System</h1>
+            <p class="lead">Calculate grades for Secondary, University, and Polytechnic levels</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container" style="margin-top: -80px; position: relative; z-index: 10;">
+        <div class="row g-4 justify-content-center mb-5">
+
+            <!-- Secondary School Card -->
+            <div class="col-lgimages/university.jpg" 
+                         alt="University Students" 
+                         class="card-img-top card-image">
+                    <div class="card-body p-4">
+                        <h2 class="card-title h4 fw-bold mb-2">
+                            <i class="fas fa-user-graduate text-success animated-icon"></i> University
+                        
+                    <div class="card-body p-4">
+                        <h2 class="card-title h4 fw-bold mb-2">Secondary School</h2>
+                        <p class="card-text text-muted mb-3">WAEC / NECO / JAMB Grading System</p>
+                        
+                        <div class="mb-3">
+                            <label for="secInput" class="form-label">Enter Your Score (0-100)</label>
+                            <input type="number" 
+                                   class="form-control" 
+                                   id="secInput" 
+                                   placeholder="e.g., 85"
+                                   min="0"
+                                   max="100">
+                        </div>
+                        
+                        <button class="btn btn-success w-100 fw-bold py-2" onclick="calculateSecondary()">Check Grade</button>
+                        
+                        <div class="result mt-3 p-3 rounded" id="secResult">
+                            <span class="result-text">Enter score to see grade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- University Caimages/polytechnic.jpg" 
+                         alt="Polytechnic Students" 
+                         class="card-img-top card-image">
+                    <div class="card-body p-4">
+                        <h2 class="card-title h4 fw-bold mb-2">
+                            <i class="fas fa-cogs text-success rotate-icon"></i> Polytechnic
+                        
+                         class="card-img-top card-image">
+                    <div class="card-body p-4">
+                        <h2 class="card-title h4 fw-bold mb-2">University</h2>
+                        <p class="card-text text-muted mb-3">5.0 Scale Grading System</p>
+                        
+                        <div class="mb-3">
+                            <label for="uniInput" class="form-label">Enter Your CGPA (0.0-5.0)</label>
+                            <input type="number" 
+                                   class="form-control" 
+                                   id="uniInput" 
+                                   placeholder="e.g., 4.5"
+                                   min="0"
+                                   max="5"
+                                   step="0.01">
+                        </div>
+                        
+                        <button class="btn btn-success w-100 fw-bold py-2" onclick="calculateUni()">Check Class</button>
+                        
+                        <div class="result mt-3 p-3 rounded" id="uniResult">
+                            <span class="result-text">Enter CGPA to see class</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Polytechnic Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card custom-card shadow">
+                    <img src="https://source.unsplash.com/800x600/?engineering,technical,workshop,students" 
+                         alt="Polytechnic Students" 
+                         class="card-img-top card-image">
+                    <div class="card-body p-4">
+                        <h2 class="card-title h4 fw-bold mb-2">Polytechnic</h2>
+                        <p class="card-text text-muted mb-3">4.0 Scale Grading System</p>
+                        
+                        <div class="mb-3">
+                            <i class="fas fa-book-open pulse-icon"></i>
+                        
+                            <label for="polyInput" class="form-label">Enter Your CGPA (0.0-4.0)</label>
+                            <input type="number" 
+                                   class="form-control" 
+                                   id="polyInput" 
+                                   placeholder="e.g., 3.5"
+                                   min="0"
+                                   max="4"
+                            <i class="fas fa-medal animated-icon"></i>
+                        
+                                   step="0.01">
+                        </div>
+                        
+                        <button class="btn btn-success w-100 fw-bold py-2" onclick="calculatePoly()">Check Standings</button>
+                        
+                        <div class="result mt-3 p-3 rounded" id="polyResult">
+                            <span class="result-text">
+                            <i class="fas fa-tools rotate-icon"></i>
+                        ter CGPA to see standings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Information Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Understanding Nigerian Grading Systems</h2>
+                <p class="lead">A comprehensive guide to academic excellence across different educational levels</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Note 1 -->
+                <div class="col-md-4">
+                    <div class="note-card text-center">
+                        <div class="icon-box mx-auto">📚</div>
+                        <h4 class="fw-bold mb-3">Secondary School Excellence</h4>
+                        <p>The WAEC and NECO grading systems range from A1 (75-100) to F9 (0-39). Aim for grades A1-C6 to qualify for university admission through JAMB.</p>
+                    </div>
+                </div>
+
+                <!-- Note 2 -->
+                <div class="col-md-4">
+                    <div class="note-card text-center">
+                        <div class="icon-box mx-auto">🎓</div>
+                        <h4 class="fw-bold mb-3">University Standards</h4>
+                        <p>Nigerian universities use a 5.0 CGPA scale. First Class (4.50-5.00) represents exceptional performance, while 2:1 (3.50-4.49) shows strong academic achievement.</p>
+                    </div>
+                </div>
+
+                <!-- Note 3 -->
+                            <i class="fas fa-lightbulb pulse-icon" style="color: #FFD700;"></i> Important Note
+                        
+                <div class="col-md-4">
+                    <div class="note-card text-center">
+                        <div class="icon-box mx-auto">⚙️</div>
+                        <h4 class="fw-bold mb-3">Polytechnic/Monotechnic</h4>
+                        <p>Polytechnics operate on a 4.0 CGPA scale focused on technical excellence. Distinction (3.50-4.00) and Upper Credit (3.00-3.49) open doors to advanced careers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="note-card">
+                        <h4 class="fw-bold mb-3 text-center">💡 Important Note</h4>
+                        <p class="mb-2">✓ <strong>Accuracy Matters:</strong> Always verify your scores before calculating grades</p>
+                        <p class="mb-2">✓ <strong>Stay Informed:</strong> Different institutions may have slight variations in their grading policies</p>
+                        <p class="mb-2">✓ <strong>Academic Integrity:</strong> Your grades reflect your dedication and hard work</p>
+                        <p class="mb-0">✓ <strong>Future Goals:</strong> Understanding your grades helps in planning your academic and career path</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2026 NaijaGrading System. Made with 💚 for Nigerian Students</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
