@@ -51,10 +51,10 @@ function calculatePoly() {
     }
     
     let classification = '';
-    if (cgpa >= 4.50) classification = 'Distinction';
-    else if (cgpa >= 3.50) classification = 'Upper Credit';
-    else if (cgpa >= 2.50) classification = 'Lower Credit';
-    else if (cgpa >= 1.50) classification = 'Pass';
+    if (cgpa >= 4.50 && cgpa <= 5.00) classification = 'Distinction';
+    else if (cgpa >= 3.50 && cgpa < 4.50) classification = 'Upper Credit';
+    else if (cgpa >= 2.50 && cgpa < 3.50) classification = 'Lower Credit';
+    else if (cgpa >= 1.50 && cgpa < 2.50) classification = 'Pass';
     else classification = 'Fail';
     
     resultDiv.innerHTML = `<span class="result-text">${classification}</span>`;
