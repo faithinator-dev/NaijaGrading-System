@@ -1,0 +1,110 @@
+<svg width="1600" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bgGrad)"/>
+  
+  <!-- Classroom setting -->
+  <!-- Floor -->
+  <rect x="0" y="700" width="1600" height="200" fill="#b0bec5"/>
+  
+  <!-- Desk rows -->
+  <!-- Row 1 - Back -->
+  <g transform="translate(200, 350)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#6d4c41"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#4caf50"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(400, 350)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#8d6e63"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#2196f3"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(600, 350)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#6d4c41"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#f44336"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(900, 350)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#8d6e63"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#ff9800"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(1100, 350)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#6d4c41"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#9c27b0"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(1300, 350)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#8d6e63"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#009688"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <!-- Row 2 - Front -->
+  <g transform="translate(200, 550)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#8d6e63"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#673ab7"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(400, 550)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#6d4c41"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#4caf50"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(600, 550)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#8d6e63"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#ff5722"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(900, 550)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#6d4c41"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#2196f3"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(1100, 550)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#8d6e63"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#00bcd4"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <g transform="translate(1300, 550)">
+    <rect x="0" y="0" width="100" height="60" fill="#795548" rx="5"/>
+    <circle cx="50" cy="-30" r="20" fill="#6d4c41"/>
+    <rect x="30" y="-10" width="40" height="50" fill="#4caf50"/>
+    <rect x="10" y="10" width="30" height="40" fill="#fff9c4"/>
+  </g>
+  
+  <!-- Pencils on desks -->
+  <line x1="220" y1="570" x2="250" y2="575" stroke="#424242" stroke-width="3"/>
+  <line x1="420" y1="570" x2="450" y2="575" stroke="#424242" stroke-width="3"/>
+  <line x1="620" y1="570" x2="650" y2="575" stroke="#424242" stroke-width="3"/>
+  
+  <!-- Overlay for text contrast -->
+  <rect x="0" y="0" width="1600" height="900" fill="rgba(0, 135, 81, 0.3)"/>
+</svg>

@@ -19,6 +19,7 @@
 
         body {
             background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .hero {
@@ -114,6 +115,7 @@
             margin-bottom: 15px;
         }
 
+        /* Animations */
         .animated-icon {
             animation: bounce 2s infinite;
         }
@@ -131,8 +133,6 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.1); }
         }
-                <i class="fas fa-graduation-cap animated-icon"></i> NaijaGrading System
-            
 
         .rotate-icon {
             animation: rotate 3s linear infinite;
@@ -142,13 +142,11 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-images/secondary-school.jpg" 
-                         alt="Secondary School Students" 
-                         class="card-img-top card-image">
-                    <div class="card-body p-4">
-                        <h2 class="card-title h4 fw-bold mb-2">
-                            <i class="fas fa-school text-success pulse-icon"></i> Secondary School
-                        
+
+        footer {
+            background-color: var(--primary-green);
+        }
+
         @media (max-width: 768px) {
             .hero {
                 height: 300px;
@@ -161,7 +159,9 @@ images/secondary-school.jpg"
     <!-- Hero Section -->
     <section class="hero d-flex align-items-center justify-content-center">
         <div class="hero-content text-center text-white">
-            <h1 class="display-4 fw-bold mb-3">🇳🇬 NaijaGrading System</h1>
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="fas fa-graduation-cap animated-icon"></i> NaijaGrading System
+            </h1>
             <p class="lead">Calculate grades for Secondary, University, and Polytechnic levels</p>
         </div>
     </section>
@@ -171,15 +171,15 @@ images/secondary-school.jpg"
         <div class="row g-4 justify-content-center mb-5">
 
             <!-- Secondary School Card -->
-            <div class="col-lgimages/university.jpg" 
-                         alt="University Students" 
+            <div class="col-lg-4 col-md-6">
+                <div class="card custom-card shadow">
+                    <img src="images/secondary-school.svg" 
+                         alt="Secondary School Students" 
                          class="card-img-top card-image">
                     <div class="card-body p-4">
                         <h2 class="card-title h4 fw-bold mb-2">
-                            <i class="fas fa-user-graduate text-success animated-icon"></i> University
-                        
-                    <div class="card-body p-4">
-                        <h2 class="card-title h4 fw-bold mb-2">Secondary School</h2>
+                            <i class="fas fa-school text-success pulse-icon"></i> Secondary School
+                        </h2>
                         <p class="card-text text-muted mb-3">WAEC / NECO / JAMB Grading System</p>
                         
                         <div class="mb-3">
@@ -201,16 +201,16 @@ images/secondary-school.jpg"
                 </div>
             </div>
 
-            <!-- University Caimages/polytechnic.jpg" 
-                         alt="Polytechnic Students" 
+            <!-- University Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card custom-card shadow">
+                    <img src="images/university.svg" 
+                         alt="University Students" 
                          class="card-img-top card-image">
                     <div class="card-body p-4">
                         <h2 class="card-title h4 fw-bold mb-2">
-                            <i class="fas fa-cogs text-success rotate-icon"></i> Polytechnic
-                        
-                         class="card-img-top card-image">
-                    <div class="card-body p-4">
-                        <h2 class="card-title h4 fw-bold mb-2">University</h2>
+                            <i class="fas fa-user-graduate text-success animated-icon"></i> University
+                        </h2>
                         <p class="card-text text-muted mb-3">5.0 Scale Grading System</p>
                         
                         <div class="mb-3">
@@ -236,16 +236,16 @@ images/secondary-school.jpg"
             <!-- Polytechnic Card -->
             <div class="col-lg-4 col-md-6">
                 <div class="card custom-card shadow">
-                    <img src="https://source.unsplash.com/800x600/?engineering,technical,workshop,students" 
+                    <img src="images/polytechnic.svg" 
                          alt="Polytechnic Students" 
                          class="card-img-top card-image">
                     <div class="card-body p-4">
-                        <h2 class="card-title h4 fw-bold mb-2">Polytechnic</h2>
+                        <h2 class="card-title h4 fw-bold mb-2">
+                            <i class="fas fa-cogs text-success rotate-icon"></i> Polytechnic
+                        </h2>
                         <p class="card-text text-muted mb-3">4.0 Scale Grading System</p>
                         
                         <div class="mb-3">
-                            <i class="fas fa-book-open pulse-icon"></i>
-                        
                             <label for="polyInput" class="form-label">Enter Your CGPA (0.0-4.0)</label>
                             <input type="number" 
                                    class="form-control" 
@@ -253,17 +253,13 @@ images/secondary-school.jpg"
                                    placeholder="e.g., 3.5"
                                    min="0"
                                    max="4"
-                            <i class="fas fa-medal animated-icon"></i>
-                        
                                    step="0.01">
                         </div>
                         
                         <button class="btn btn-success w-100 fw-bold py-2" onclick="calculatePoly()">Check Standings</button>
                         
                         <div class="result mt-3 p-3 rounded" id="polyResult">
-                            <span class="result-text">
-                            <i class="fas fa-tools rotate-icon"></i>
-                        ter CGPA to see standings</span>
+                            <span class="result-text">Enter CGPA to see standings</span>
                         </div>
                     </div>
                 </div>
@@ -284,7 +280,9 @@ images/secondary-school.jpg"
                 <!-- Note 1 -->
                 <div class="col-md-4">
                     <div class="note-card text-center">
-                        <div class="icon-box mx-auto">📚</div>
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-book-open pulse-icon"></i>
+                        </div>
                         <h4 class="fw-bold mb-3">Secondary School Excellence</h4>
                         <p>The WAEC and NECO grading systems range from A1 (75-100) to F9 (0-39). Aim for grades A1-C6 to qualify for university admission through JAMB.</p>
                     </div>
@@ -293,18 +291,20 @@ images/secondary-school.jpg"
                 <!-- Note 2 -->
                 <div class="col-md-4">
                     <div class="note-card text-center">
-                        <div class="icon-box mx-auto">🎓</div>
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-medal animated-icon"></i>
+                        </div>
                         <h4 class="fw-bold mb-3">University Standards</h4>
                         <p>Nigerian universities use a 5.0 CGPA scale. First Class (4.50-5.00) represents exceptional performance, while 2:1 (3.50-4.49) shows strong academic achievement.</p>
                     </div>
                 </div>
 
                 <!-- Note 3 -->
-                            <i class="fas fa-lightbulb pulse-icon" style="color: #FFD700;"></i> Important Note
-                        
                 <div class="col-md-4">
                     <div class="note-card text-center">
-                        <div class="icon-box mx-auto">⚙️</div>
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-tools rotate-icon"></i>
+                        </div>
                         <h4 class="fw-bold mb-3">Polytechnic/Monotechnic</h4>
                         <p>Polytechnics operate on a 4.0 CGPA scale focused on technical excellence. Distinction (3.50-4.00) and Upper Credit (3.00-3.49) open doors to advanced careers.</p>
                     </div>
@@ -315,7 +315,9 @@ images/secondary-school.jpg"
             <div class="row mt-5">
                 <div class="col-lg-8 mx-auto">
                     <div class="note-card">
-                        <h4 class="fw-bold mb-3 text-center">💡 Important Note</h4>
+                        <h4 class="fw-bold mb-3 text-center">
+                            <i class="fas fa-lightbulb pulse-icon" style="color: #FFD700;"></i> Important Note
+                        </h4>
                         <p class="mb-2">✓ <strong>Accuracy Matters:</strong> Always verify your scores before calculating grades</p>
                         <p class="mb-2">✓ <strong>Stay Informed:</strong> Different institutions may have slight variations in their grading policies</p>
                         <p class="mb-2">✓ <strong>Academic Integrity:</strong> Your grades reflect your dedication and hard work</p>
