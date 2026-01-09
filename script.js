@@ -45,16 +45,16 @@ function calculatePoly() {
     const cgpa = parseFloat(document.getElementById('polyInput').value);
     const resultDiv = document.getElementById('polyResult');
     
-    if (isNaN(cgpa) || cgpa < 0 || cgpa > 4) {
-        resultDiv.innerHTML = '<span class="result-text text-danger">Please enter a valid CGPA (0.0-4.0)</span>';
+    if (isNaN(cgpa) || cgpa < 0 || cgpa > 5) {
+        resultDiv.innerHTML = '<span class="result-text text-danger">Please enter a valid CGPA (0.0-5.0)</span>';
         return;
     }
     
     let classification = '';
-    if (cgpa >= 3.50) classification = 'Distinction';
-    else if (cgpa >= 3.00) classification = 'Upper Credit';
+    if (cgpa >= 4.50) classification = 'Distinction';
+    else if (cgpa >= 3.50) classification = 'Upper Credit';
     else if (cgpa >= 2.50) classification = 'Lower Credit';
-    else if (cgpa >= 2.00) classification = 'Pass';
+    else if (cgpa >= 1.50) classification = 'Pass';
     else classification = 'Fail';
     
     resultDiv.innerHTML = `<span class="result-text">${classification}</span>`;
